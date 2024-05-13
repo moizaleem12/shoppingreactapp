@@ -1,38 +1,405 @@
-.App {
-  text-align: center;
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bannerimg {
+    height: 80vh;
+    width: 100%;
+    object-fit: cover;
+    cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+/* navbar */
+
+.bar {
+    background: transparent;
+    height: 70vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.alink {
+    text-decoration: none;
+    margin: 0 2vh;
+    color: rgb(0, 0, 0);
+    padding: 1.5vh 2.5vh;
+    font-size: 3vh;
 }
 
-.App-link {
-  color: #61dafb;
+.alink :active:hover {
+    color: rgb(255, 255, 255);
+    background: black;
+    border-radius: 10px;
+    padding: 1.5vh 2.5vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.favi {
+    color: black;
+    font-size: 3vh;
+    cursor: pointer;
+}
+
+.cartnum {
+    top: 2.4vh;
+    right: 1vh
+}
+
+
+/* navbar categories */
+
+.category ul li {
+    list-style: none;
+}
+
+.category ul li a {
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0 4vh;
+    color: rgb(0, 0, 0);
+    line-height: 7vh;
+    font-size: 4vh;
+}
+
+.category ul li a:hover {
+    border-bottom: 1px solid black;
+}
+
+.droopi {
+    display: none;
+}
+
+.category ul li:hover .droopi {
+    display: block;
+    position: absolute;
+    top: 25vh;
+    left: 30vh;
+    z-index: 1;
+}
+
+.category ul li:hover .droopi ul {
+    display: block;
+    padding: 3vh;
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px black;
+}
+
+.category ul li:hover .droopi ul li a {
+    transition: all 5s ease-in;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.blackline {
+    border: none;
+    background: black;
+    height: 1px;
+    width: 100%;
+}
+
+
+/* serach input */
+
+.search input {
+    background: black;
+    border: 1px solid black;
+    color: wheat
+}
+
+#search::-webkit-input-placeholder {
+    color: rgb(255, 255, 255);
+    border-radius: none;
+}
+
+
+/* homepage */
+
+.types img {
+    height: 60vh;
+}
+
+
+/* video */
+
+.vidback {
+    background: #232323;
+}
+
+video {
+    width: 100%;
+}
+
+
+/* men products */
+
+.men {
+    position: relative;
+    height: 50vh;
+}
+
+.men::before {
+    position: absolute;
+    content: "";
+    background: url(./assets/banner.jpg) no-repeat;
+    background-size: cover;
+    height: 70vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.899;
+}
+
+
+/* flloatingicons */
+
+.floatingicons {
+    color: black;
+    font-size: 3vh;
+    border: 1px solid black;
+    padding: 5px;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.floatingicons:hover {
+    border: none;
+    box-shadow: inset 0px 0px 10px rgb(92, 89, 84);
+}
+
+
+/* products */
+
+.pimage {
+    height: 80vh;
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+}
+
+.pimage:hover {
+    opacity: "0.8";
+}
+
+
+/* cart */
+
+.cartingflow {
+    padding: 4vh;
+    display: none;
+    top: 10vh;
+    position: absolute;
+    height: max-content;
+    width: max-content;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 1s ease-in-out;
+    overflow-x: hidden;
+    z-index: 1;
+}
+
+.cartingflow.active {
+    display: block;
+    right: 0;
+    width: 40%;
+    transition: all 0.5s ease-in-out;
+}
+
+
+/* login */
+
+#formcontainer {
+    height: max-content;
+}
+
+#formsdata {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    padding: 5vh;
+}
+
+#registercontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    background: #c3b5b521;
+    padding: 5vh;
+}
+
+
+/* product image */
+
+.productimg {
+    height: 72vh
+}
+
+
+/* marquie */
+
+.design {
+    color: yellow;
+    margin: 0 4vh;
+}
+
+
+/* footer */
+
+.fdesign {
+    background: #232323;
+    color: rgb(255, 255, 255);
+    padding: 4vh;
+}
+
+.inputbox {
+    background: transparent;
+    border: 1px solid white;
+    margin-right: 12vh;
+}
+
+.icon {
+    cursor: pointer;
+    font-size: "3vh"
+}
+
+.vcard {
+    height: 6vh;
+    width: 10%;
+    margin: "0 5vh";
+    border-radius: "10px";
+}
+
+.mcard {
+    height: 6vh;
+    width: 10%;
+    border-radius: "10px";
+}
+
+
+/* pagetop */
+
+.pagesetiing {
+    position: fixed;
+    top: 50vh;
+    right: 0vh;
+    padding: 2vh;
+    background: rgb(233 236 239 / 79%);
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px black;
+    font-size: 5vh;
+    cursor: pointer;
+}
+
+
+/* media queries */
+
+@media only screen and (max-width:1024px) {
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    /* homepage */
+    .types img {
+        height: 40vh;
+    }
+    /* footer */
+    .fdesign {
+        background: #232323;
+        color: rgb(255, 255, 255);
+        padding: 4vh;
+    }
+    .center {
+        display: flex;
+        justify-content: center;
+    }
+    .vcard {
+        height: 3vh;
+        width: 6%;
+        margin-right: 5vh;
+    }
+    .mcard {
+        height: 3vh;
+        width: 6%;
+    }
+    /* men */
+    .men {
+        position: relative;
+        height: auto;
+    }
+    .men::before {
+        height: 50vh;
+        width: 100%;
+    }
+    /* navbar */
+    .bar {
+        height: max-content;
+    }
+    .alink {
+        margin: 0;
+        padding: 2vh;
+        font-size: 2vh;
+    }
+    .favi {
+        font-size: 2vh;
+    }
+    .cartnum {
+        top: 2vh;
+        right: 1vh
+    }
+    /* navbar categories */
+    .category ul li a {
+        margin: 0;
+        line-height: 6vh;
+        font-size: 2vh;
+    }
+    .category ul li:hover .droopi {
+        top: 22vh;
+        left: 10vh;
+    }
+    .category ul li:hover .droopi ul {
+        padding: 2vh;
+    }
+    /* serach input */
+    .search input {
+        font-size: 2vh;
+        outline: none;
+    }
+    /* banner img */
+    .bannerimg {
+        height: auto;
+        width: 100%;
+    }
+    .pimage {
+        height: 30vh;
+    }
+    /* product image */
+    .productimg {
+        height: 35vh;
+    }
+    /* pagesetting */
+    .pagesetiing {
+        top: 90vh;
+        left: 0vh;
+        font-size: 3vh;
+    }
+    /* carting */
+    .cartingflow {
+        display: none;
+        top: 10vh;
+        position: absolute;
+        height: max-content;
+        width: 100%;
+    }
+    .cartingflow.active {
+        display: block;
+        width: 70%;
+        transition: all 0.5s ease-in-out;
+    }
 }

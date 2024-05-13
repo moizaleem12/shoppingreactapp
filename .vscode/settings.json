@@ -1,0 +1,16 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "src/Components/Girls.js": true
+    },
+    "hide-files.files": [
+        "src/Components/Girls.js"
+    ],
+    "standard.enable": true,
+    "editor.formatOnSave": true
+}

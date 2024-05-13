@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Productd from "./Components/Productd";
+import Men from "./Components/Men";
+import Girl from "./Components/Girl";
+import MenProducts from "./Components/MenProducts";
+import WomenProducts from "./Components/WomenProducts";
+import Homepage from "./Components/Homepage";
+import Login from "./Components/Login";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<Homepage named="moiz" />}></Route>
+          <Route exact path="/men" element={<Men />}></Route>
+          <Route exact path="/women" element={<Girl />}></Route>
+          <Route exact path="/menproducts" element={<MenProducts />}></Route>
+          <Route exact path="/womenproducts"  element={<WomenProducts />}></Route>
+          <Route exact path="/p" element={<Productd />}></Route>
+          <Route exact path="/signin" element={<Login />}></Route>
+          <Route exact path="/womenproducts" element={<WomenProducts />}
+          ></Route>
+        </Routes>
+      </Router>
+    </>
   );
 }
 
