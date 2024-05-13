@@ -10,7 +10,7 @@ import Login from "./Components/Login";
 function App() {
   return (
     <>
-      <Router>
+      <Router basename="/ecommerce-site">
         <Routes>
           <Route exact path="/" element={<Homepage named="moiz" />}></Route>
           <Route exact path="/men" element={<Men />}></Route>
@@ -19,8 +19,6 @@ function App() {
           <Route exact path="/womenproducts"  element={<WomenProducts />}></Route>
           <Route exact path="/p" element={<Productd />}></Route>
           <Route exact path="/signin" element={<Login />}></Route>
-          <Route exact path="/womenproducts" element={<WomenProducts />}
-          ></Route>
         </Routes>
       </Router>
     </>
