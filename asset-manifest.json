@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/shoppingreactapp/static/css/main.a1fb0ec4.css",
+    "main.js": "/shoppingreactapp/static/js/main.dda4f2c3.js",
+    "static/js/787.64399e5a.chunk.js": "/shoppingreactapp/static/js/787.64399e5a.chunk.js",
+    "static/media/video.mp4": "/shoppingreactapp/static/media/video.e7ffdaafd55b27f53af3.mp4",
+    "static/media/boysbanner.jpg": "/shoppingreactapp/static/media/boysbanner.2324f50b26fa5801c54c.jpg",
+    "static/media/girls.jpg": "/shoppingreactapp/static/media/girls.3de1ceafec106659c189.jpg",
+    "static/media/banner.jpg": "/shoppingreactapp/static/media/banner.5e0df8dc3a08cc3c3744.jpg",
+    "static/media/womenbanner.jpg": "/shoppingreactapp/static/media/womenbanner.bdae81fa61177938e7eb.jpg",
+    "static/media/men.jpg": "/shoppingreactapp/static/media/men.4a24b966f743fb5265df.jpg",
+    "static/media/womenwallpaper.jpg": "/shoppingreactapp/static/media/womenwallpaper.c6ba226d346cce1fe30f.jpg",
+    "static/media/menwallpaper.jpg": "/shoppingreactapp/static/media/menwallpaper.060cb068742eaf64097a.jpg",
+    "static/media/mastercard.jpg": "/shoppingreactapp/static/media/mastercard.d8bc7b15dd73862a06eb.jpg",
+    "static/media/visa.png": "/shoppingreactapp/static/media/visa.06a32c5d380da1e9a043.png",
+    "index.html": "/shoppingreactapp/index.html",
+    "main.a1fb0ec4.css.map": "/shoppingreactapp/static/css/main.a1fb0ec4.css.map",
+    "main.dda4f2c3.js.map": "/shoppingreactapp/static/js/main.dda4f2c3.js.map",
+    "787.64399e5a.chunk.js.map": "/shoppingreactapp/static/js/787.64399e5a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a1fb0ec4.css",
+    "static/js/main.dda4f2c3.js"
+  ]
+}
