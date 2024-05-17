@@ -1,5 +1,8 @@
 import React, { useState } from "react";
+
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import Productd from "./Components/Productd";
 import Men from "./Components/Men";
 import Girl from "./Components/Girl";
@@ -10,7 +13,7 @@ import Login from "./Components/Login";
 function App() {
   return (
     <>
-      <Router basename="/ecommerce-site">
+      <HashRouter>
         <Routes>
           <Route exact path="/" element={<Homepage named="moiz" />}></Route>
           <Route exact path="/men" element={<Men />}></Route>
@@ -20,7 +23,7 @@ function App() {
           <Route exact path="/p" element={<Productd />}></Route>
           <Route exact path="/signin" element={<Login />}></Route>
         </Routes>
-      </Router>
+      </HashRouter>
     </>
   );
 }
