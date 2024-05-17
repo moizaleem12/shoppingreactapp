@@ -10,7 +10,7 @@ import {
 export default function Cart({ checkcart }) {
   // data
   const { data, total } = useSelector((state) => {
-    console.log(state);
+    // console.log(state);
     return state.gotocart;
   });
   const dispatch = useDispatch();

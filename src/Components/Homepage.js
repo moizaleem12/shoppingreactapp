@@ -12,8 +12,11 @@ import PageTop from "./PageTop";
 export default function Homepage() {
   return (
     <>
-      <PageTop />
-      <div className="container-fluid">
+     
+
+<PageTop />
+
+<div className="container-fluid">
         <div className="row justify-content-around ">
           <div className="col types text-center">
             <Link to="/men">
@@ -36,10 +39,9 @@ export default function Homepage() {
             </Link>
           </div>
           <div className="col types text-center">
-            <Link to="/kids">
-              {" "}
+        
               <img src={boys} style={{ cursor: "pointer" }} />
-            </Link>
+           
           </div>
           <div className="col types text-center">
             <img src={girls} style={{ cursor: "pointer" }} />

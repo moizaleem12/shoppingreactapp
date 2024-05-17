@@ -33,8 +33,8 @@ export default function Login() {
       const pass = values.password;
       const setdata = JSON.stringify(localStorage.setItem("email", email));
       const setpass = JSON.stringify(localStorage.setItem("pass", pass));
-      console.log(localStorage.getItem("email", setdata));
-      console.log(localStorage.getItem("pass", setpass));
+      // console.log(localStorage.getItem("email", setdata));
+      // console.log(localStorage.getItem("pass", setpass));
       action.resetForm();
       alert("Singup successfull Now login");
     },
@@ -59,7 +59,7 @@ export default function Login() {
         navigate("/");
       } else {
         alert("user is not resgiter");
-        console.log(storedemail, storedpass, usermail, userpass);
+        // console.log(storedemail, storedpass, usermail, userpass);
       }
       action.resetForm();
     },

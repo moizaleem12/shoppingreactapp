@@ -268,17 +268,12 @@ video {
     font-size: "3vh"
 }
 
-.vcard {
-    height: 6vh;
-    width: 10%;
-    margin: "0 5vh";
-    border-radius: "10px";
-}
-
+.vcard,
 .mcard {
     height: 6vh;
     width: 10%;
-    border-radius: "10px";
+    margin: 0 5vh;
+    border-radius: 10px;
 }
 
 
@@ -319,14 +314,14 @@ video {
         display: flex;
         justify-content: center;
     }
-    .vcard {
-        height: 3vh;
-        width: 6%;
+    .vcard,
+    .mcard {
+        height: 5vh;
+        width: max-content;
         margin-right: 5vh;
     }
-    .mcard {
-        height: 3vh;
-        width: 6%;
+    .vcard {
+        margin: 0 2vh;
     }
     /* men */
     .men {

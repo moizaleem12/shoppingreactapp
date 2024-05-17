@@ -1,4 +1,5 @@
 import React from "react";
+
 import Navbar from "./Navbar";
 import MenImg from "../assets/menwallpaper.jpg";
 import Marquee from "./Marquees";

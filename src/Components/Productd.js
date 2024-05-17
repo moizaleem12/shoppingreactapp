@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-// import Image from "../assets/girls.jpg";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import PageTop from "./PageTop";
@@ -8,7 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { productscollection } from "../features/navi/homenav";
 
 export default function Productd() {
-  // new gets
+
   const { gets } = useSelector((state) => {
     return state.gotocart;
   });

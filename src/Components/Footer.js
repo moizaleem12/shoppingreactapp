@@ -69,14 +69,14 @@ export default function Footer() {
       <hr />
 
       <div className="row ">
-        <div className="col-sm-12 col-6 center">
+        <div className="col-6 col-sm-12 center ">
           <p className="text-light" style={{ width: "max-content" }}>
             © 2023 Breakout All Rights Reserved.
           </p>
         </div>
-        <div className="col-sm-12 col-6 d-flex justify-content-end justify-content-sm-center ">
-          <img src={Vcard} className="vcard" alt="" />
-          <img src={Mcard} className="mcard" alt="" />
+        <div className=" col-6 col-sm-12  d-flex justify-content-end justify-content-sm-center ">
+          <img src={Vcard} className="vcard" alt="network error" />
+          <img src={Mcard} className="mcard" alt="network error" />
         </div>
       </div>
     </div>

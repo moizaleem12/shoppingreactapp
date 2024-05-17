@@ -1,7 +1,7 @@
 const products = [
   {
     id: 1,
-    image: "products/p1.jpg",
+    image: "products/p7.jpg",
     title: "perfume",
     price: "3200",
     d_price: "7000",
@@ -49,7 +49,7 @@ const products = [
   },
   {
     id: 7,
-    image: "products/p7.jpg",
+    image: "products/p1.jpg",
     quantity: 1,
     title: "men shirt",
     price: "6200",

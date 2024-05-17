@@ -44,13 +44,13 @@ export default function WomenProducts() {
   };
   const getsort = () => {
     let sortedProducts = [...usertext()];
-    if (sorting == "a-z") {
+    if (sorting === "a-z") {
       sortedProducts.sort((a, b) => a.title.localeCompare(b.title));
-    } else if (sorting == "z-a") {
+    } else if (sorting === "z-a") {
       sortedProducts.sort((a, b) => b.title.localeCompare(a.title));
-    } else if (sorting == "lowtohigh") {
+    } else if (sorting === "lowtohigh") {
       sortedProducts.sort((a, b) => a.price - b.price);
-    } else if (sorting == "hightolow") {
+    } else if (sorting === "hightolow") {
       sortedProducts.sort((a, b) => b.price - a.price);
     }
     return sortedProducts;

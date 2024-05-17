@@ -10,6 +10,18 @@ import { Link } from "react-router-dom";
 import { adding, sortingproducts } from "../features/navi/homenav.js";
 import { useDispatch, useSelector } from "react-redux";
 export default function MenProducts() {
+  const [two, settwo] = useState(false); //for grid
+  const [griding, setgriding] = useState(false); //for grid
+  //col-12
+  const bargrid = () => {
+    setgriding(!griding);
+    settwo(false);
+  };
+  // col-6
+  const twoparts = () => {
+    settwo(!two);
+    setgriding(false);
+  };
   const dispatch = useDispatch();
   const gettinginfo = (items) => {
     dispatch(adding(items));
@@ -27,13 +39,13 @@ export default function MenProducts() {
   };
   const getsort = () => {
     let sortedProducts = [...usertext()];
-    if (sorting == "a-z") {
+    if (sorting === "a-z") {
       sortedProducts.sort((a, b) => a.title.localeCompare(b.title));
-    } else if (sorting == "z-a") {
+    } else if (sorting === "z-a") {
       sortedProducts.sort((a, b) => b.title.localeCompare(a.title));
-    } else if (sorting == "lowtohigh") {
+    } else if (sorting === "lowtohigh") {
       sortedProducts.sort((a, b) => a.price - b.price);
-    } else if (sorting == "hightolow") {
+    } else if (sorting === "hightolow") {
       sortedProducts.sort((a, b) => b.price - a.price);
     }
     return sortedProducts;
@@ -49,8 +61,9 @@ export default function MenProducts() {
           <div className="col-sm-3 col-md-4 col-lg-6 d-flex flex-direction-column align-items-center   ">
             <h4 className="mx-5 text-dark"> View as </h4>
 
-            <FontAwesomeIcon icon={faBars} className="mx-3 floatingicons" />
-            <FontAwesomeIcon icon={faPause} className="mx-3 floatingicons" />
+             
+            <FontAwesomeIcon icon={faBars}  className="mx-3 floatingicons"  onClick={bargrid}/>
+            <FontAwesomeIcon icon={faPause}  onClick={twoparts} className="mx-3 floatingicons" />
           </div>
           {/* //sorting */}
           <div className="col-sm-9 col-md-8 col-lg-6 d-flex flex-direction-column align-items-center justify-content-end">
@@ -72,14 +85,16 @@ export default function MenProducts() {
       </div>
       <div className="container-fluid text-dark">
         <div className="row">
-          {getsort().length === 0
-            ? "No item found"
-            : getsort().map((items) => {
+          {getsort().length === 0  ? "No item found" : getsort().map((items) => {
                 return (
-                  <div
-                    className="col-6 d-flex flex-column align-items-center  text-center "
-                    key={items.id}
-                  >
+                  <div   className={`col-${
+                    griding
+                      ? "12 d-flex flex-column  justify-content-start align-items-center my-3"
+                      : two
+                      ? "6"
+                      : "6"
+                  }   text-center responsi`}
+                  key={items.id}>
                     <Link to="/p">
                       <img
                         src={items.image}
@@ -90,8 +105,12 @@ export default function MenProducts() {
                         className="pimage "
                       />
                     </Link>
-                    <div className="col-6 text-center">
-                      <h3 className="ptext"> {items.title} </h3>{" "}
+                    <div  className={`col${
+                        griding
+                          ? "d-flex flex-column justify-content-start align-items-center"
+                          : "d-flex"
+                      }`} >
+                      <h3 className="ptext"> {items.title} </h3>
                       <del>{items.d_price} Rs </del>
                       <p> {items.price} Rs </p>
                     </div>

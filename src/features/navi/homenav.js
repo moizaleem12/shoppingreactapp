@@ -53,7 +53,7 @@ const gotocart = createSlice({
               total: updatedData.reduce((acc, curr) => acc + curr.price * curr.quantity, 90)
             };
           } else {
-            console.log("Item not found in cart");
+            // console.log("Item not found in cart");
             return state;
           }
         },
@@ -74,7 +74,7 @@ const gotocart = createSlice({
               total: updatedData.reduce((acc, curr) => acc + curr.price * curr.quantity, 90)
             };
           } else {
-            console.log("Item not found in cart or quantity is already at minimum");
+            // console.log("Item not found in cart or quantity is already at minimum");
             return state;
           }
         },
@@ -92,7 +92,7 @@ const gotocart = createSlice({
           state.cartnum -= 1;
           state.data.splice(action.payload, 1);
           localStorage.setItem("infotocart", JSON.stringify(state.data)); // Update local storage
-          console.log("deleted", action.payload);
+          // console.log("deleted", action.payload);
         },
         
         //empty cart
@@ -126,5 +126,5 @@ export const {
     quantity,
     usertext,
 } = gotocart.actions;
-console.log(gotocart.actions);
+// console.log(gotocart.actions);
 export default rootReducer;
