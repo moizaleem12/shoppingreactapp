@@ -1,16 +1,17 @@
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
+import Homepage from "./Components/Homepage";
 import Productd from "./Components/Productd";
 import Men from "./Components/Men";
 import Girl from "./Components/Girl";
 import MenProducts from "./Components/MenProducts";
 import WomenProducts from "./Components/WomenProducts";
-import Homepage from "./Components/Homepage";
 import Login from "./Components/Login";
 function App() {
   return (
     <>
-      <Router>
+      <HashRouter>
         <Routes>
           <Route exact path="/" element={<Homepage />}></Route>
           <Route exact path="/men" element={<Men />}></Route>
@@ -20,7 +21,7 @@ function App() {
           <Route exact path="/p" element={<Productd />}></Route>
           <Route exact path="/signin" element={<Login />}></Route>
         </Routes>
-      </Router>
+      </HashRouter>
     </>
   );
 }
