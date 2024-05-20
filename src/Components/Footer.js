@@ -27,7 +27,7 @@ export default function Footer() {
           <p className="text-light">Shipping</p>
           <p className="text-light">Return & Exchange</p>
           <p className="text-light">Track Your Order</p>
-          <p className="text-light">Cancellation Policy</p>
+          <p className="text-light"> Policy</p>
         </div>
         <div className="col-sm-4 col">
           <h5 className="my-3">CUSTOMER SERVICE</h5>
