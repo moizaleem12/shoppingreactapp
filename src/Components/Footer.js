@@ -20,7 +20,7 @@ export default function Footer() {
           <p className="text-light">Contact Us</p>
           <p className="text-light">Store Location</p>
           <p className="text-light">Terms Of Service</p>
-          <p className="text-light">Refund Policy</p>
+          <p className="text-light">Policy</p>
         </div>
         <div className="col-sm-4 col">
           <h5 className="my-3">POLICIES</h5>
